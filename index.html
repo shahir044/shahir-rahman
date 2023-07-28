@@ -232,7 +232,7 @@
                                         <h5>from Bangladesh</h5>
                                     </div>
                                     <div class="subtitle">
-                                        <p>I am a Software Engineer &amp; Web Developer having <span class="blueColor">3+ years</span> of experience. My expertise includes proficiency in Laravel, ReactJS, MERN Stack, REST Api, SOAP Api, Bootstrap, CSS.
+                                        <p>I am a Software Engineer &amp; Web Developer having <span id="exp" class="blueColor">3+ years</span> of experience. My expertise includes proficiency in Laravel, ReactJS, MERN Stack, REST Api, SOAP Api, Bootstrap, CSS.
                                         </p>
                                     </div>
                                     <div class="buttons">
@@ -290,9 +290,9 @@
                                         <p>Hello there! My name is <span class="yellowColor">M. Shahir Rahman</span>. I
                                             am a Software Engineer &amp; Web Developer.
                                         <p>
-                                            I am specialized in developing creative and responsive web applications. With a solid foundation in front-end and back-end development, my expertise includes strong knowledge in various web development technologies such as Laravel, ReactJS, MERN Stack, and Boostrap. Skilled in conceptualizing, developing, and deploying software containing logical solutions to business requirement. Moreover, I am dedicated to staying updated with the latest web development trends and techniques, ensure to deliver high-quality and cutting-edge solutions.
+                                            I am specialized in developing creative and responsive web applications. With a solid foundation in front-end and back-end development, my expertise includes strong knowledge in various web development technologies such as Laravel, ReactJS, MERN Stack, and Bootstrap. Skilled in conceptualizing, developing, and deploying software containing logical solutions to business requirement. Moreover, I am dedicated to staying updated with the latest web development trends and techniques, ensure to deliver high-quality and cutting-edge solutions.
                                         </p>
-                                        <p>With three years experience as a professional a software engineer, I have
+                                        <p>As a professional a software engineer, I have
                                             acquired the skills and knowledge necessary to make a project successful.
                                             I enjoy every step of the development process, from Discussion, Collaboration to Deployment.
                                         </p>
@@ -1470,6 +1470,18 @@
 <script src="js/plugins.js"></script>
 <script src="js/init.js"></script>
 <!-- /SCRIPTS -->
+<script>
+    const experience = new Date('2021-01-17');
+    const ageDifMs = Date.now() - experience.getTime();
+    const ageDate = new Date(ageDifMs);
+    const years = Math.abs(ageDate.getUTCFullYear() - 1970);
+    const months = Math.floor((ageDate.getUTCMonth() + 1) + (ageDate.getUTCDate() / 30));
+    const age = years + (months / 12);
+    let totalExp = 3;
+    totalExp = Math.ceil(age);
+    // console.log(totalExp.toFixed(0)); // Output: 32.5
+    document.getElementById('exp').innerHTML = `${totalExp.toFixed(0)}+`;
+</script>
 
 </body>
 </html>
